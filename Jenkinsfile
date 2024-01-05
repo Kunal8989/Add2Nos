@@ -10,7 +10,7 @@ pipeline {
         stage('Build'){
             steps {
                 git credentialsId: '2ad43051-22e6-47ba-ac4d-dd76dd555f63', url: 'https://github.com/Kunal8989/Add2Nos.git'
-                sh 'python3 add.py'
+                sh 'docker build -t firstDocker .'
             }
         }
         stage('Test'){
